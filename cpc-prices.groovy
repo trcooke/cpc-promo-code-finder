@@ -15,7 +15,7 @@ for (int i = 0; i <= 100; i++) {
 
   for (int j = 0; j < lines.size(); j++) {
     if (lines.get(j) =~ /<span class="price">/) {
-      prices.put(code, new BigDecimal(lines.get(j + 1).trim().replace('£','')))
+      prices.put(code, new BigDecimal(lines.get(j + 1).trim().replace('£','').replace('&pound;','')))
     }
   }
 }
